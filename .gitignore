@@ -1,0 +1,13 @@
+# Archivos de entorno y credenciales
+.env
+
+# Archivos de sistema operativo e IDEs
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+*.log
+
+# Temporales de compilación o respaldos
+*.tmp
+*.bak

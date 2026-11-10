@@ -1,0 +1,100 @@
+:root{
+  --azul:#1f4e79; --azul2:#2e75b6; --fondo:#f2f5f9; --blanco:#fff;
+  --gris:#6b7a8c; --borde:#dde5ee; --verde:#2e9e5b; --rojo:#d64545;
+  --ambar:#e8a13a; --texto:#22303f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Calibri,Arial,sans-serif;background:var(--fondo);color:var(--texto);font-size:14px}
+a{color:var(--azul2);text-decoration:none}
+.app{display:flex;min-height:100vh}
+
+/* ---------- Sidebar ---------- */
+.sidebar{width:230px;background:linear-gradient(180deg,#173d5f,#1f4e79);color:#dce8f5;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.logo{display:flex;gap:10px;align-items:center;padding:18px 16px;border-bottom:1px solid rgba(255,255,255,.12)}
+.logo-ico{font-size:26px}
+.logo strong{font-size:17px;color:#fff;letter-spacing:1px}
+.logo small{font-size:11px;color:#9fc1e0;letter-spacing:2px}
+.sidebar nav{flex:1;padding:12px 8px;display:flex;flex-direction:column;gap:2px}
+.sidebar nav a{color:#cddced;padding:10px 12px;border-radius:8px;display:block;font-weight:500}
+.sidebar nav a .ico{display:inline-block;width:20px;text-align:center;margin-right:4px}
+.sidebar nav a:hover{background:rgba(255,255,255,.10);color:#fff}
+.sidebar nav a.activo{background:var(--azul2);color:#fff}
+.sesion{padding:14px 16px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:2px;font-size:12px}
+.sesion strong{color:#fff;font-size:13px}
+.sesion small{color:#9fc1e0}
+.sesion .salir{margin-top:8px;background:rgba(214,69,69,.25);color:#ffd9d9;text-align:center;padding:7px;border-radius:6px}
+.sesion .salir:hover{background:var(--rojo);color:#fff}
+.sesion .perfil{margin-top:8px;background:rgba(46,117,182,.25);color:#dce8f5;text-align:center;padding:7px;border-radius:6px}
+.sesion .perfil:hover{background:var(--azul2);color:#fff}
+.nav-badge{display:inline-block;min-width:18px;text-align:center;background:var(--rojo);color:#fff;border-radius:10px;padding:1px 6px;font-size:11px;font-weight:700;margin-left:4px}
+
+/* ---------- Contenido ---------- */
+.contenido{flex:1;padding:20px 26px;max-width:1400px}
+.barra{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.barra h1{font-size:22px;color:var(--azul)}
+.estado-sistema{font-size:12px;color:var(--gris);display:flex;align-items:center;gap:6px}
+.punto{width:9px;height:9px;border-radius:50%;background:var(--verde);display:inline-block;box-shadow:0 0 6px var(--verde)}
+
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:18px}
+.tarjeta{background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:16px;position:relative;overflow:hidden}
+.tarjeta .etiqueta{font-size:12px;color:var(--gris);text-transform:uppercase;letter-spacing:.6px}
+.tarjeta .valor{font-size:28px;font-weight:700;color:var(--azul);margin-top:6px}
+.tarjeta .detalle{font-size:12px;color:var(--gris);margin-top:4px}
+.tarjeta::after{content:'';position:absolute;right:-18px;top:-18px;width:70px;height:70px;border-radius:50%;background:rgba(46,117,182,.08)}
+.tarjeta.rojo .valor{color:var(--rojo)}
+.tarjeta.verde .valor{color:var(--verde)}
+.tarjeta.ambar .valor{color:var(--ambar)}
+
+.panel{background:var(--blanco);border:1px solid var(--borde);border-radius:12px;padding:18px;margin-bottom:18px}
+.panel h2{font-size:15px;color:var(--azul);margin-bottom:12px;border-left:4px solid var(--azul2);padding-left:8px}
+.dos-columnas{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+@media(max-width:1000px){.dos-columnas{grid-template-columns:1fr}}
+
+table.tabla{width:100%;border-collapse:collapse;font-size:13px}
+table.tabla th{background:#eaf1f9;color:var(--azul);text-align:left;padding:9px 10px;border-bottom:2px solid var(--borde)}
+table.tabla td{padding:8px 10px;border-bottom:1px solid var(--borde)}
+table.tabla tr:hover td{background:#f7fafd}
+table.tabla .num{text-align:right}
+
+.etiqueta-estado{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600}
+.st-verde{background:#e2f5e9;color:#1e7a44}
+.st-rojo{background:#fdeaea;color:#b13434}
+.st-ambar{background:#fdf3e2;color:#a9761d}
+.st-gris{background:#eceff3;color:#5d6b7a}
+
+.botones{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.boton{display:inline-block;background:var(--azul2);color:#fff;border:none;padding:8px 14px;border-radius:7px;cursor:pointer;font-size:13px}
+.boton:hover{background:var(--azul)}
+.boton.secundario{background:#e7edf5;color:var(--azul)}
+.boton.peligro{background:var(--rojo)}
+.boton.verde{background:var(--verde)}
+.boton.mini{padding:4px 9px;font-size:12px}
+
+.campo{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.campo label{font-size:12px;color:var(--gris);font-weight:600}
+.campo input,.campo select,.campo textarea{padding:8px 10px;border:1px solid var(--borde);border-radius:7px;font-size:13px;background:#fff}
+.fila{display:flex;gap:12px;flex-wrap:wrap}
+.fila .campo{flex:1;min-width:160px}
+
+.alerta{padding:11px 14px;border-radius:8px;margin-bottom:14px;font-size:13px}
+.alerta.ok{background:#e2f5e9;border:1px solid #b7e4c7;color:#1e7a44}
+.alerta.error{background:#fdeaea;border:1px solid #f3c1c1;color:#b13434}
+.alerta.aviso{background:#fdf3e2;border:1px solid #f5ddb2;color:#a9761d}
+
+/* ---------- Login ---------- */
+.login-pantalla{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#173d5f,#2e75b6)}
+.login-caja{background:#fff;border-radius:16px;padding:36px;width:380px;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.login-caja h1{font-size:20px;color:var(--azul);text-align:center;margin-bottom:4px}
+.login-caja .sub{text-align:center;color:var(--gris);font-size:12px;margin-bottom:22px}
+.login-caja .boton{width:100%;padding:11px;font-size:14px;margin-top:6px}
+.login-caja .ayuda{margin-top:16px;font-size:11.5px;color:var(--gris);background:#f4f7fb;padding:10px;border-radius:8px;line-height:1.6}
+
+/* ---------- Grafico ---------- */
+.canvas-wrap{position:relative;width:100%;height:300px}
+canvas.grafico{width:100%;height:100%}
+.leyenda{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--gris);margin-top:8px}
+.leyenda span{display:flex;align-items:center;gap:5px}
+.leyenda i{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+.pie-mapa{font-size:12px;color:var(--gris);margin-top:10px}
+.badge{display:inline-block;background:#eaf1f9;color:var(--azul);border-radius:6px;padding:2px 7px;font-size:11px;font-weight:600}
