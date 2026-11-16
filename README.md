@@ -2,6 +2,10 @@
 
 Sistema inteligente de monitoreo y control en tiempo real para la cadena de frío de biológicos y vacunas en centros de salud, basado en contenedores **Docker** y nodos telemétricos **ESP32-S3**.
 
+> 📖 **DOCUMENTACIÓN COMPLETA PARA INFORME, MANUALES Y DEFENSA:**  
+> Consulta el documento maestro integral con todas las especificaciones teóricas, diagramas, esquemas eléctricos, diccionario de datos y manuales en:  
+> 👉 **[DOCUMENTACION_SISTEMA_COMPLETA.md](DOCUMENTACION_SISTEMA_COMPLETA.md)**
+
 ---
 
 ## 📌 Arquitectura del Sistema
@@ -78,3 +82,4 @@ SMTP_FROM=tu_correo@gmail.com
 * **MariaDB 10.11 / MySQL** (Modelo relacional de datos).
 * **Docker & Docker Compose** (Contenedorización).
 * **HTML5 / CSS3 / JavaScript Vanilla** (Dashboard en tiempo real sin dependencias externas pesadas).
+

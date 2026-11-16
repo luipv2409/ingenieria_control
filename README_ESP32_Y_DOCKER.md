@@ -10,8 +10,10 @@ El sistema ya se encuentra levantado y operativo en contenedores Docker independ
 - **Puerto Base de Datos MySQL/MariaDB**: `3308` (Para evitar conflicto con el puerto 3306 de XAMPP)
 
 ### Credenciales de acceso al Panel Web:
-- **Correo**: `gunnar.pecho@ulat.edu.bo`
+- **Correo**: `ludwinggunnarpv24@gmail.com`
 - **Contraseña**: `admin123`
+
+> 📘 **Documentación Maestra Completa:** Consulta [DOCUMENTACION_SISTEMA_COMPLETA.md](DOCUMENTACION_SISTEMA_COMPLETA.md) para el informe técnico, manuales y presentación.
 
 ---
 
